@@ -48,7 +48,7 @@ function ValidarCpfCnpj(doc){
         if(!ValidarPrimeiroDigitoCpf(cpf) && !ValidarSegundoDigitoCpf(cpf)){
             return false
         }else{
-            //console.log(doc , 'cpf verdadeiro')
+            console.log(doc , 'cpf valido')
             return true
         }
     }else if(doc.length == 14){
@@ -57,7 +57,7 @@ function ValidarCpfCnpj(doc){
         if(!ValidarPrimeiroDigitoCnpj(cnpj) && !ValidarSegundoDigitoCnpj(cnpj)){
             return false
         }else{
-            //console.log(doc , 'cnpj verdadeiro')
+            console.log(doc , 'cnpj valido')
             return true
         }
     }else{
@@ -75,8 +75,6 @@ function ValidarPrimeiroDigitoCpf(cpf){
         sum += cpf[i] * (10 - i)
     }
     const resto = (sum * 10) % 11
-
-    //console.log(cpf[9])
 
     if(resto == 10){
         let resto = 0
